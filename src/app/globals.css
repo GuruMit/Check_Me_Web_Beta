@@ -1,0 +1,297 @@
+@import "tailwindcss";
+@import "./styles/animation.css";
+
+:root {
+  /* --background: #ffffff;
+  --foreground: #171717;
+  --primary: #3B82F6;
+  --secondary-light: #F0F8FF;
+  --sub-foreground: #64748B;
+  --border-light: #E0F2F7; */
+
+  
+}
+
+@theme {
+  --background: #ffffff;
+  --foreground: #030712;
+
+  --card: 0 0% 100%;
+  --card-foreground: 222.2 84% 4.9%;
+
+  --popover: 0 0% 100%;
+  --popover-foreground: 222.2 84% 4.9%;
+
+  --primary: #3b82f6;
+  --primary-foreground: 210 40% 98%;
+
+  --secondary: #f0f4f7;
+  --secondary-foreground: 222.2 47.4% 11.2%;
+
+  --tertiary: #005881;
+  --modal-background: #F7FAFC;
+
+  --muted: #F0F4F7;
+  --muted-foreground: #6B7C94;
+
+  --accent:#ECF4FF;
+  --accent-foreground: 222.2 47.4% 11.2%;
+
+
+
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 210 40% 98%;
+
+  --border: #e0e7ed;
+  --input: #E2E8F0;
+  --ring: 221 83% 53%;
+
+  --radius: 0.75rem;
+
+ 
+
+  --sidebar-background: 0 0% 98%;
+  --sidebar-foreground: 240 5.3% 26.1%;
+  --sidebar-primary: 240 5.9% 10%;
+  --sidebar-primary-foreground: 0 0% 98%;
+  --sidebar-accent: 240 4.8% 95.9%;
+  --sidebar-accent-foreground: 240 5.9% 10%;
+  --sidebar-border: 220 13% 91%;
+  --sidebar-ring: 217.2 91.2% 59.8%;
+}
+
+@theme inline {
+
+  /* Brand Main Colors */
+
+  --color-brand-50: #f0f7ff;
+  --color-brand-100: #e0effe;
+  --color-brand-200: #bae0fd;
+  --color-brand-300: #7cc6fb;
+  --color-brand-400: #3aa9f5;
+  --color-brand-500: #108be7;
+  --color-brand-600: #0670c7;
+  --color-brand-700: #0759a2;
+  --color-brand-800: #0a4a86;
+  --color-brand-900: #0d3f70;
+  --color-campus-navy: #1A365D;
+  --color-campus-blue: #4299E1;
+  --color-campus-lightblue: #BEE3F8;
+  --color-campus-orange: #ED8936;
+  --color-campus-gray: #718096;
+
+
+  /* Other Colors */
+
+
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-tertiary: var(--tertiary);
+  --color-sub-foreground: var(--sub-foreground);
+  --color-muted: var(--muted);
+  --color-foreground: var(--foreground);
+  --color-modal-background: var(--modal-background);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-popover: var(--popover);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+
+ 
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+@font-face {
+  font-family: "Archivo";
+  src: url("/fonts/Archivo-Regular.ttf") format("truetype"); 
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap; 
+}
+
+@font-face {
+  font-family: "Archivo";
+  src: url("/fonts/Archivo-SemiBold.ttf") format("truetype"); 
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+@font-face {
+  font-family: "Archivo";
+  src: url("/fonts/Archivo-Bold.ttf") format("truetype"); 
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+
+}
+
+/* html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%; 
+  overflow: hidden; 
+} */
+
+.card {
+  padding: 2em;
+}
+
+
+/* Apply these styles globally or within a specific CSS file */
+aside::-webkit-scrollbar {
+  width: 5px; /* Adjust the width as needed */
+}
+
+aside::-webkit-scrollbar-thumb {
+  background-color: var(--color-brand-200); /* Example color: slate-300 */
+  border-radius: 4px; /* Optional: Add rounded corners */
+}
+
+aside::-webkit-scrollbar-track {
+  background-color: #f7fafc; /* Example color: slate-50 */
+}
+
+/* Hover effect (optional) */
+aside::-webkit-scrollbar-thumb:hover {
+  background-color: #a0aec0; /* Darker shade on hover */
+}
+
+
+.bar::-webkit-scrollbar {
+  width: 5px; /* Adjust the width as needed */
+ 
+}
+
+.bar::-webkit-scrollbar-thumb {
+  background-color: var(--color-brand-500); /* Example color: slate-300 */
+  border-radius: 4px; /* Optional: Add rounded corners */
+  
+}
+
+.bar::-webkit-scrollbar-track {
+  background-color: var(--color-brand-100) /* Example color: slate-50 */
+}
+
+/* Hover effect (optional) */
+.bar::-webkit-scrollbar-thumb:hover {
+  background-color: #a0aec0; /* Darker shade on hover */
+}
+
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: "Archivo", sans-serif; 
+  }
+
+  .font-archivo-regular {
+    font-family: "Archivo", sans-serif; 
+    font-weight: 400;
+  }
+
+  .font-archivo-semibold {
+    font-family: "Archivo", sans-serif;
+    font-weight: 600;
+  }
+  
+  .font-archivo-bold {
+    font-family: "Archivo", sans-serif; 
+    font-weight: 700;
+  }
+  
+
+}
+
+@layer components {
+  .glass-panel {
+    @apply bg-white/80 backdrop-blur-lg border border-white/20 shadow-lg;
+  }
+
+  .glass-input {
+    @apply bg-white/30 backdrop-blur-md border border-white/30 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-500/50 transition-all duration-200;
+  }
+
+  .nav-link {
+    @apply relative inline-block after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-brand-500 after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left;
+  }
+
+  .feature-icon-container {
+    @apply relative flex items-center justify-center w-12 h-12 mb-4 rounded-full bg-brand-500/10 text-primary;
+  }
+
+  .gradient-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-brand-500 to-blue-700 bg-[length:200%_auto];
+  }
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+}
+
+
+
+@layer base {
+  :root {
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 0 0% 98%;
+    --sidebar-primary-foreground: 240 5.9% 10%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+.bg-sidebar {
+  background-color: hsl(var(--sidebar-background));
+}
+
+.text-sidebar-foreground {
+  color: hsl(var(--sidebar-foreground));
+}
+
+.bg-sidebar-accent {
+  background-color: hsl(var(--sidebar-accent));
+}
+
+.text-sidebar-accent-foreground {
+  color: hsl(var(--sidebar-accent-foreground));
+}
+
+.border-sidebar-border {
+  border-color: hsl(var(--sidebar-border));
+}
