@@ -1,0 +1,40 @@
+@keyframes float {
+    0% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-10px); /* Ajustez la distance de flottement ici */
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
+
+
+  
+  .animate-border-bra {
+    animation: border-bra 1s ease-in-out infinite alternate; /* Applique l'animation */
+  }
+  
+ 
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(79, 158, 255, 0.15); 
+  cursor: pointer;
+}
+
+
+.container {
+  width: 100%; /* Default width to take full viewport */
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+/* Apply max-width for larger screens */
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1400px;
+  }
+}
